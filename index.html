@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Study Clock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="clock-wrap">
+    <div class="time" id="time" aria-live="polite">00:00:00</div>
+    <div class="date" id="date">----年--月--日（-）</div>
+  </main>
+
+  <div class="runner-track" aria-hidden="true">
+    <svg class="runner" id="runner" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+      <!-- Frame A: legs apart -->
+      <g id="frameA" class="frame">
+        <rect x="8"  y="0" width="6" height="6"/>   <!-- head -->
+        <rect x="7"  y="6" width="8" height="5"/>   <!-- body -->
+        <rect x="3"  y="7" width="4" height="3"/>   <!-- back arm -->
+        <rect x="15" y="6" width="4" height="3"/>   <!-- front arm -->
+        <rect x="6"  y="11" width="3" height="5"/>  <!-- back leg forward -->
+        <rect x="13" y="11" width="3" height="4"/>  <!-- front leg back -->
+      </g>
+      <!-- Frame B: legs crossed -->
+      <g id="frameB" class="frame">
+        <rect x="8"  y="0" width="6" height="6"/>
+        <rect x="7"  y="6" width="8" height="5"/>
+        <rect x="4"  y="6" width="4" height="3"/>
+        <rect x="14" y="7" width="4" height="3"/>
+        <rect x="9"  y="11" width="3" height="5"/>
+        <rect x="10" y="11" width="3" height="4"/>
+      </g>
+    </svg>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
